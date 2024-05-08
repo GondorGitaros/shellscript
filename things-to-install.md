@@ -1,54 +1,41 @@
 update {
-    // arch
-    sudo pacman -Syu
-    // apt
-    sudo apt update && sudo apt full-upgrade
+   // apt
+    sudo apt update -y && sudo apt full-upgrade -y
 neofetch {
-    // arch 
-    sudo pacman -S neofetch,
-    // debian (apt based)
-    sudo apt install neofetch
+   // debian (apt based)
+    sudo apt install neofetch -y
 }
 neovim {
     // apt
-    sudo apt install snapd
-    sudo snap install nvim
-    // arch
-    sudo pacman -S neovim
-}
+    sudo apt install snapd -y
+    sudo snap install nvim -y
+
 neovim-config {
     // apt
-    sudo mkdir .config
-    sudo apt install git
+    mkdir .config
+    sudo apt install git -y
     git clone https://github.com/GondorGitaros/nvim.git
-    sudo mv nvim/ .config/
-    // arch
-    sudo mkdir .config
-    git clone https://github.com/GondorGitaros/nvim.git
-    sudo mv nvim/ .config/
-}
+    mv nvim/ .config/
+
 tmux {
-    // arch
-    sudo pacman -S tmux
     // apt
-    sudo apt install tmux
+    sudo apt install tmux -y
 }
 ripgrep {
-    // arch
-    sudo pacman -S ripgrep
     // apt
-    sudo apt install ripgrep
+    sudo apt install ripgrep -y
 }
 bashrc-file {
-    // arch 
-    git clone https://github.com/GondorGitaros/bashrc
-    sudo rm .bashrc
-    sudo mv ~/bashrc/.bashrc ~/.bashrc
-    source .bashr
     // apt
     git clone https://github.com/GondorGitaros/bashrc
-    sudo rm .bashrc
-    sudo mv ~/bashrc/.bashrc ~/.bashrc
+    rm .bashrc
+    mv ~/bashrc/.bashrc ~/.bashrc
     source .bashr
 }
-
+install-npm{
+    // apt
+    sudo apt install npm -y
+}
+install-openssh {
+    sudo apt install openssh-client -y
+}
