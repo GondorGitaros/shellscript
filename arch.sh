@@ -3,47 +3,47 @@
 # Update system
 update_system() {
     echo "Updating system..."
-    sudo pacman -Syu
+    sudo pacman -Syu --noconfirm
 }
 
 # Install Neofetch
 install_neofetch() {
     echo "Installing Neofetch..."
-    sudo pacman -S neofetch
+    sudo pacman -S neofetch --noconfirm
 }
 
 # Install Neovim
 install_neovim() {
     echo "Installing Neovim..."
-    sudo pacman -S neovim
+    sudo pacman -S neovim --noconfirm
 }
 
 # Configure Neovim
 configure_neovim() {
     echo "Configuring Neovim..."
-    sudo mkdir -p ~/.config
+    mkdir -p ~/.config
     git clone https://github.com/GondorGitaros/nvim.git
-    sudo mv nvim/ ~/.config/
+    mv nvim/ ~/.config/
 }
 
 # Install Tmux
 install_tmux() {
     echo "Installing Tmux..."
-    sudo pacman -S tmux
+    sudo pacman -S tmux --noconfirm
 }
 
 # Install Ripgrep
 install_ripgrep() {
     echo "Installing Ripgrep..."
-    sudo pacman -S ripgrep
+    sudo pacman -S ripgrep --noconfirm
 }
 
 # Configure Bashrc
 configure_bashrc() {
     echo "Configuring Bashrc..."
     git clone https://github.com/GondorGitaros/bashrc
-    sudo rm ~/.bashrc
-    sudo mv bashrc/.bashrc ~/
+    rm ~/.bashrc
+    mv bashrc/.bashrc ~/
     source ~/.bashrc
 }
 
