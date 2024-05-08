@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Cd back
+cd-back() {
+    cd ..
+}
 # Update system
 update_system() {
     echo "Updating system..."
@@ -49,6 +53,7 @@ configure_bashrc() {
 
 # Main function
 main() {
+    cd-back
     update_system
     install_neofetch
     install_neovim

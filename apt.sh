@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd-back(){
+    cd ..
+}
 update() {
     sudo apt update -y && sudo apt full-upgrade -y
 }
@@ -44,6 +47,7 @@ install-openssh() {
 }
 
 # Main
+cd-back
 update
 neofetch
 neovim
