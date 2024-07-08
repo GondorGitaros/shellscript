@@ -1,5 +1,6 @@
 # Shell Script For Setting Up A New Computer
 
-- to install (apt)
+## To install (apt)
 1. cd into the cloned directory
 1. chmod +x apt.sh
+1. ./apt.sh
