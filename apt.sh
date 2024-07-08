@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd-back(){
-    cd ..
+    cd
 }
 update() {
     sudo apt update -y && sudo apt full-upgrade -y
